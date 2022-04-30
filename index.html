@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
@@ -18,7 +17,7 @@
     find the main content of your page-->
 
     <main>
-      <!--The img element is used to add images with the src attribute to point to a specific images's URL-->
+      <!--The img element is used to add images with the src attribute to point to a specific image's URL-->
       <!--The alt attribute in an img element is used for screen readers to improve accessibility and is displayed if the image fails to load-->
       <img
         src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
@@ -34,8 +33,42 @@
       </p>
 
       <!--The a (anchor) element links to another content outside of your web-->
-      <!--The a element needs a destination address called an href attribute and an anchor text-->
+      <!--The a element needs a destination address called a href attribute and an anchor text-->
       <a href="https://www.freecatphotoapp.com">cat photos</a>
+
+      <!--The a element can also be used to create internal links to jump to different sections within a webpage-->
+      <!--The href attribute needs a hash symbol # plus the value of the id attribute for going to a specific section-->
+      <!--target is an anchor tag attribute that specifies where to open the link. The value _blank specifies to open the link in a new tab-->
+      <a href="#contacts-header">Go to contacts</a>
+      <h2 id="contacts-header">Contacts</h2>
+
+      <!--It is possible to nest our img elements within an a element-->
+      <!--The hash symbol in the href attribute creates a dead link-->
+      <a href="#"
+        ><img
+          src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+          alt="A cat is wachting"
+      /></a>
+
+      <!--The ul element is used to create bulleted unordered lists-->
+      <!--The li element within a ul tag defines each item of the unordered list-->
+      <!--The ol element allows devs to create bulleted ordered lists-->
+      <ul>
+        <li>milk</li>
+        <li>fish</li>
+        <li>cheese</li>
+      </ul>
+
+      <!--Web forms actually submit data to a server using nothing more than pure HTML
+      by specifying an action attribute on the form element.-->
+      <form action=""https://www.freecatphotoapp.com/submit-cat-photo"">
+        <!--Input elements are a convenient way to get input from users-->
+        <!--Placeholder attribute shows some text before user inputes anything-->
+        <input type="text" placeholder="this is a placeholder">
+      
+        <!--Button element permits to send data from the form to the URL specified in the action attribute-->
+      <button type="submit">Submit</button>
+      </form>
     </main>
   </body>
 </html>
