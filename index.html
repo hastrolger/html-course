@@ -61,13 +61,49 @@
 
       <!--Web forms actually submit data to a server using nothing more than pure HTML
       by specifying an action attribute on the form element.-->
-      <form action=""https://www.freecatphotoapp.com/submit-cat-photo"">
+      <form action="https://www.freecatphotoapp.com/submit-cat-photo">
         <!--Input elements are a convenient way to get input from users-->
         <!--Placeholder attribute shows some text before user inputes anything-->
-        <input type="text" placeholder="this is a placeholder">
-      
+        <!--Required attribute specifies that the input field must be filled out before submitting the form-->
+        <input type="text" placeholder="this is a placeholder" />
+
+        <!--It's possible to set a checkbox or radio button to be checked by default using the checked attribute-->
+        <!--A radio is a type of input-->
+        <!--The label element nests the input and has a text label (option name)-->
+        <!--All related radio buttons should have the same name attribute to create a radio button group-->
+       <!--The for attribute from label element is related to the id attribute from the input element-->
+        <!--If you omit the value attribute, the submitted form data uses the default value, which is on-->
+       
+        <!--Result: indoor-outdoor=on-->
+        <!--This is from the name and value attributes of the "indoor" input-->
+        <label for="indoor">
+          <input type="radio" name="indoor-outdoor" id="indoor" checked/>
+          Indoor
+        </label>
+        <!--Result: indoor-outdoor=outdoor-->
+        <!--This is from the name and value attributes of the "indoor" outdoor-->
+        <label for="outdoor">
+          <input type="radio" name="indoor-outdoor" value="outdoor" id="outdoor" />
+          Outdoor
+        </label>
+
+        <br>
+        <!--Checkboxes are commonly used for questions that may have more than one answer-->
+        <label for="amusing">
+          <input type="checkbox" name="personality" value="amusing" id="amusing" checked>
+          Amusing
+        </label>
+        <label for="charming">
+          <input type="checkbox" name="personality" value="charming" id="charming">
+          Charming
+        </label>
+        <label for="cunning">
+          <input type="checkbox" name="personality" value="cunning" id="cunning">
+          Cunning
+        </label>
+
         <!--Button element permits to send data from the form to the URL specified in the action attribute-->
-      <button type="submit">Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </main>
   </body>
